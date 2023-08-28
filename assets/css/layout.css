@@ -1,0 +1,107 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+  width: 300px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1d9238;
+}
+
+
+/* CSS for Nav Bar */
+header {
+  background: linear-gradient(180deg, #815b5b, #8f4040);
+  color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px; /* Reduce the height */
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left h1 {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+nav a:hover#home-button { 
+  background-color: #888;
+}
+
+/* CSS for Footer */
+footer {
+  background: linear-gradient(180deg, #815b5b, #8f4040);
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .nav-left {
+  text-align: center;
+}
+
+footer h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+footer h3 {
+  font-size: 14px;
+  margin: 5px 0 0;
+}

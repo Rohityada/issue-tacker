@@ -1,0 +1,136 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: fade-in 1s ease-in-out;
+  max-width: 750px;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.project-heading {
+  margin-bottom: 10px;
+}
+
+.project-name {
+  margin-bottom: 10px;
+}
+
+.project-info {
+  margin-bottom: 5px;
+}
+
+.section-heading {
+  padding-left: 20px;
+}
+
+.issue-list {
+  background-color: #fff;
+  box-shadow: 0 0 18px rgb(109 28 28 / 20%);
+  border-radius: 50px;
+  margin: 7px;
+  padding: 10px;
+  width: 700px;
+  max-height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.issue-item {
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.issue-title {
+  font-weight: bold;
+}
+
+.issue-author {
+  font-weight: bold;
+}
+
+.issue-description {
+  margin-bottom: 0;
+}
+
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-group form,
+.button-group a {
+  margin: 0 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.issue-list::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+  display: none;
+}
+
+.issue-list::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 0.25em;
+}
+
+.issue-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.issue-list {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

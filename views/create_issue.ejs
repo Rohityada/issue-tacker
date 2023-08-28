@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="../assets/css/issueForm.css">
+<h2>Create Issue</h2>
+
+<form action="/projects/<%= projectId %>/issues" method="POST" class="issue-form">
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+    </div>
+
+    <div>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+    </div>
+
+    <div>
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required>
+    </div>
+
+    <div class="form-group">
+        <label for="labels">Labels:</label>
+        <div class="custom-select">
+            <select id="labels" name="labels">
+                <option value="">Select Labels</option>
+                <option value="UI">UI</option>
+                <option value="Bug">Bug</option>
+                <option value="Development">Development</option>
+                <option value="Backend">Backend</option>
+                <option value="FrontEnd">FrontEnd</option>
+                <option value="Database">Database</option>
+
+            </select>
+            <div class="select-dropdown"></div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Issue</button>
+</form>

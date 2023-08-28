@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="../assets/css/projectView.css">
+<div class="container scrollable">
+    <h1 class="project-heading">Project Details</h1>
+
+    <h2 class="project-name">
+        <%= project.name %>
+    </h2>
+    <p class="project-info"><strong>Author:</strong>
+        <%= project.author %>
+    </p>
+    <p class="project-info"><strong>Description:</strong>
+        <%= project.description %>
+    </p>
+
+    <h3 class="section-heading">Issues:</h3>
+
+    <form action="/projects/<%= project._id %>/filter" method="GET" class="filter-form">
+        <div class="form-group">
+            <label for="label-filter">Filter by Label:</label>
+            <select name="label" id="label-filter">
+                <option value="all">All Labels</option>
+                <% labels.forEach(function(label) { %>
+                    <option value="<%= label %>">
+                        <%= label %>
+                    </option>
+                    <% }); %>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="search">Search:</label>
+            <input type="text" name="search" id="search">
+        </div>
+        <button type="submit" class="btn btn-primary">Apply Filters</button>
+    </form>
+
+    <% if (project.issues.length===0) { %>
+        <h4>No Issues Found</h4>
+        <% } else { %>
+            <ul class="issue-list">
+                <% project.issues.forEach(function(issue) { %>
+                    <li class="issue-item">
+                        <strong class="issue-title">
+                            Title: <%= issue.title %>
+                        </strong>
+                        <br>
+                        <strong class="issue-author">
+                            By: <%= issue.author %>
+                        </strong>
+                        <p class="issue-description">
+                            Description: <%= issue.description %>
+                        </p>
+                        <p class="issue-description">
+                            Labels: <%= issue.labels %>
+                        </p>
+                    </li>
+                    <% }); %>
+            </ul>
+            <% } %>
+
+                <div class="button-group">
+                    <form action="/projects/<%= project._id %>/delete" method="POST" class="delete-form">
+                        <button type="submit" class="btn btn-danger">Delete Project</button>
+                    </form>
+                    <a href="/projects/<%= project._id %>/issues/new" class="btn btn-primary">Create Issue</a>
+                    <a href="/" class="btn btn-primary">Back</a>
+                </div>
+</div>
